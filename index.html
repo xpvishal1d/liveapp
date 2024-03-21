@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <header><p>Register</p></header>
+    </div>
+    <main>
+        <div id="app">
+            <div class="logo">
+                <img src="logo.png" alt="App-Logo">
+            </div>
+            <div class="form">
+                <form onsubmit="return validateForm()">
+                    <div class="inputs">
+                        <input id="phone" placeholder="Enter Your phone Number" type="text">
+                        <input id="password" placeholder="Enter Your Login password" type="password">
+                        <input id="confirmPassword" placeholder="Conform Login password" type="password">
+                        <input id="withdrawalPassword" placeholder="Enter Your Withdrawal password" type="password">
+                        <input id="confirmWithdrawalPassword" placeholder="Conform Your Withdrawal password" type="password">
+                        <input id="randomNumber" value="52525" type="text">
+                        <input id="subbtn" type="submit" value="Submit">
+                        <div id="LoginRE">
+                            <a href="Login.html"><p>Already have an account? Login here</p></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function validateForm() {
+            var phone = document.getElementById("phone").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var withdrawalPassword = document.getElementById("withdrawalPassword").value;
+            var confirmWithdrawalPassword = document.getElementById("confirmWithdrawalPassword").value;
+            
+            // Phone number validation
+            if (phone.length !== 10 || isNaN(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+            
+            // Password validation
+            var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+            if (!password.match(passwordRegex)) {
+                alert("Password must be at least 6 characters long and contain both letters and numbers.");
+                return false;
+            }
+            
+            // Confirm password validation
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Withdrawal password validation
+            if (!withdrawalPassword.match(passwordRegex)) {
+                alert("Withdrawal password must be at least 6 characters long and contain both letters and numbers.");
+                return false;
+            }
+
+            // Confirm withdrawal password validation
+            if (withdrawalPassword !== confirmWithdrawalPassword) {
+                alert("Withdrawal passwords do not match.");
+                return false;
+            }
+
+            // If all validations pass, return true to submit the form
+            return true;
+        }
+    </script>
+</body>
+</html>

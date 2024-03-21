@@ -1,0 +1,112 @@
+body {
+    background-color: rgb(231, 255, 47);
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Added font family for consistency */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    height: 2.1rem;
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+#app {
+    margin: 0.44rem;
+    padding: 0.5rem;
+}
+
+.logo {
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.logo img {
+    width: 300px;
+    margin: auto;
+}
+
+.form {
+    margin-top: 1.4rem;
+    background-color: #fff;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);   
+}
+
+.form input[type="text"],
+.form input[type="password"] {
+    padding-left: 0.8rem;
+    font-size: 1.1rem;
+    height: 2.2rem; /* Maintain input height */
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0.5px;
+}
+
+input {
+    width: 90%;
+    margin: 0.5rem;
+    padding: 0.1rem;
+    border: 0.01rem solid rgb(0, 0, 0);
+    border-radius: 0.8rem;
+}
+
+input::placeholder {
+    font-size: 1rem;
+}
+
+#subbtn {
+    width: 92%; /* Make the submit button full width */
+    background-color: greenyellow;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: black;
+    border-radius: 3rem;
+    border: none;
+    font-weight: 600;
+}
+
+#LoginRE {
+    background: #fff;
+    color: rgb(50, 50, 232);
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 0.5rem; /* Adjust the margin */
+    margin-bottom: 0.6rem;
+
+}
+
+#LoginRE  a{
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cctg{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-evenly;
+    width: 99%;
+    margin: 0.6rem 0;
+}
+
+.cctg a{
+    text-decoration: none;
+}

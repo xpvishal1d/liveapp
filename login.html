@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <header><p>Login</p></header>
+    </div>
+    <main>
+        <div id="app">
+            <div class="logo">
+                <img src="logo.png" alt="App-Logo">
+            </div>
+            <div class="form">
+                <form onsubmit="return validateForm()">
+                    <div class="inputs">
+                        <input id="phone" placeholder="Enter Your phone Number" type="text">
+                        <input id="password" placeholder="Enter Your Login password" type="password">
+                        <input id="subbtn" type="submit" value="Submit">
+                    </div>
+                    <div class="cctg">
+                        <a href="t.me/xptechearning">Telegram Channel</a>
+                        <a href="t.me/xptechearning">Customer Service</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function validateForm() {
+            var phone = document.getElementById("phone").value;
+            var password = document.getElementById("password").value;
+            
+            // Phone number validation
+            if (phone.trim() === "") {
+                alert("Please enter your phone number.");
+                return false;
+            }
+            
+            // Password validation
+            if (password.trim() === "") {
+                alert("Please enter your password.");
+                return false;
+            }
+
+            // If all validations pass, return true to submit the form
+            return true;
+        }
+    </script>
+</body>
+</html>
